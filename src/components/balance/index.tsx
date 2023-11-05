@@ -1,6 +1,6 @@
 import React from 'react'
-import Table from '../Table'
 import { balanceData1, balanceData2, data } from '@/utils/constants'
+import Table from '../newTable'
 
 interface BalanceAccountProps {
     name: string,
