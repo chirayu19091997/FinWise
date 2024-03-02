@@ -8,7 +8,12 @@ export default async function Home() {
   const user = await currentUser();
   return (
     <main className="flex min-h-screen p-8">
-      <BalanceAccount name={user?.firstName + " " + user?.lastName || ""} date={""} creditTxns={undefined} DebitTxns={undefined} />
+      <BalanceAccount
+        name={user?.firstName + " " + user?.lastName || ""}
+        date={""}
+        creditTxns={undefined}
+        DebitTxns={undefined}
+      />
     </main>
-  )
+  );
 }

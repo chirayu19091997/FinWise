@@ -7,7 +7,7 @@ import TextHover from "./TextHover";
 import { UserButton, UserProfile } from "@clerk/nextjs";
 
 const Header = () => {
-    const HeaderOptions = [{ title: "Home", route: "/" }, { title: "Dashboard", route: "/dashboard" }]
+    const HeaderOptions = [{ title: "Home", route: "/" }, { title: "Dashboard", route: "/dashboard" }, { title: "Income Details", route: "/add-income" }]
     const [isMenuVisible, setIsMenuVisible] = useState(false);
 
     return (

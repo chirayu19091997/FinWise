@@ -37,6 +37,8 @@ export const balanceData2 = {
 
 export const fixedIncomeInputs = ["Salary", "Business", "Other"]
 export const fixedIntrestInputs = ["bankAccount", "fdAccount", "otherAccount"]
+export const getBlankBank = () => ({ "id": Math.floor(Math.random() * 90000) + 10000, "bankAccount": "", "IFSC": "", "Balance": "" })
+
 // name ->
 
 // --------------------------inputs--------------------------------------------
@@ -59,4 +61,4 @@ export const fixedIntrestInputs = ["bankAccount", "fdAccount", "otherAccount"]
 // 3 insurance
 // 4 standard
 // 5 hra
-// 6 lta 
+// 6 lta

@@ -13,7 +13,7 @@ const BalanceAccount = ({ name, date, creditTxns, DebitTxns }: BalanceAccountPro
     return (
         <div>
             {name || "USERNAME"}
-            <h1>CapitalAccount For Year Ending on {date || "date"}</h1>
+            <h1>Capital Account For Year Ending on {date || "date"}</h1>
             <div className='flex justify-center my-2 border rounded-lg p-4 divide-x '>
                 <Table data={balanceData1} />
                 <Table data={balanceData2} />

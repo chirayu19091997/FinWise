@@ -11,11 +11,12 @@ datasource db {
 }
 
 model User {
-  id      String    @id @default(auto()) @map("_id") @db.ObjectId
-  clerkId String    @unique
-  name    String
-  Income  Income?
-  Intrest Intrests?
+  id           String         @id @default(auto()) @map("_id") @db.ObjectId
+  clerkId      String         @unique
+  name         String
+  Income       Income?
+  Intrest      Intrests?
+  BankAccounts BankAccounts[]
 }
 
 model Income {
@@ -53,4 +54,13 @@ model AtcExampleExpense {
   atcExampleExpenseId String @id @default(auto()) @map("_id") @db.ObjectId
   category            String
   amount              Float
+}
+
+model BankAccounts {
+  bankAccountId String @id @default(auto()) @map("_id") @db.ObjectId
+  accNo         String
+  ifsc          String
+  balance       Float
+  user          User   @relation(fields: [userId], references: [id])
+  userId        String @unique @db.ObjectId
 }
